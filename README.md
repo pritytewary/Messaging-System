@@ -1,4 +1,4 @@
-# Messeging System Api
+# Messaging System Api
 
 ## Setup
 ### Clone the Repository:
