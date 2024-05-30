@@ -4,37 +4,59 @@ git clone <repository_url>
 
 ### Install Dependencies:
 Navigate to the project directory and install dependencies using npm:
+
 cd <project_directory>
+
 npm install
+
 Set Environment Variables:
+
 Create a .env file in the root directory and set up environment variables as per the provided .env.example.
 
 ### Run the Server:
+
 Start the server using npm:
+
 npm start
 
 
 ### API Endpoints
+
 Send Message
+
 Endpoint: POST /api/conversations/send/:conversationId
+
 #### Description: Send a message in a conversation.
+
 Headers: Authorization token
+
 Parameters:
+
 conversationId: ID of the conversation
+
 Body:
+
 json
+
 
 {
   "message": "Text message content"
 }
 
 #### Add Participant
+
 Endpoint: POST /api/conversations/:conversationId/participants
+
 Description: Add a participant to a conversation.
+
 Headers: Authorization token
+
 Parameters:
+
 conversationId: ID of the conversation
+
 Body:
+
 json
 
 {
@@ -43,21 +65,34 @@ json
 
 
 #### Remove Participant
+
 Endpoint: DELETE /api/conversations/:conversationId/participants/:participantId
+
 Description: Remove a participant from a conversation.
+
 Headers: Authorization token
+
 Parameters:
+
 conversationId: ID of the conversation
+
 participantId: ID of the participant to remove
 
 
 #### Get Messages
+
 Endpoint: GET /api/conversations/:conversationId/messages
+
 Description: Get messages in a conversation.
+
 Headers: Authorization token
+
 ##### Parameters:
+
 conversationId: ID of the conversation
+
 ##### Query Parameters:
+
 page (optional): Page number for pagination (default: 1)
 
 pageSize (optional): Number of messages per page (default: 10)
