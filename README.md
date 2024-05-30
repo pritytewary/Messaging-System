@@ -55,10 +55,11 @@ participantId: ID of the participant to remove
 Endpoint: GET /api/conversations/:conversationId/messages
 Description: Get messages in a conversation.
 Headers: Authorization token
-Parameters:
+##### Parameters:
 conversationId: ID of the conversation
-Query Parameters:
+##### Query Parameters:
 page (optional): Page number for pagination (default: 1)
+
 pageSize (optional): Number of messages per page (default: 10)
 
 ### Testing with Postman
@@ -70,14 +71,17 @@ Import the provided Postman collection (Conversation_API.postman_collection.json
 
 #### Set Environment Variables:
 Create a new environment in Postman.
+
 Add a variable named baseUrl and set its value to your server's base URL (e.g., http://localhost:3000).
 
 #### Authenticate:
 Send a POST request to /api/signup with the required user details to create a new account.
+
 Send a POST request to /api/login with the user credentials to obtain an authentication token.
 
 #### Access Endpoints:
 Use the obtained token as the Authorization header for accessing protected endpoints.
+
 Send requests to the various endpoints in the collection, providing necessary parameters and payloads.
 
 
